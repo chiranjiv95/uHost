@@ -1,0 +1,238 @@
+* {
+        box-sizing: border-box;
+}
+
+body {
+        font-family: 'Montserrat', sans-serif;
+        margin: 0;
+        display: grid;
+        grid-template-rows: auto 8rem;
+}
+
+/* Backdrop */
+
+.backdrop {
+        position: fixed;
+        display: none;
+        top: 0;
+        left: 0;
+        z-index: 100;
+        width: 100vw;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.5);
+}
+
+
+/* Header */
+.main-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        /* background: #2ddf5c; */
+        background: linear-gradient(to right, #11998e, #38ef7d);
+        padding: 8px 16px;
+        /* position */
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1;
+}
+
+.main-header div {
+        display: flex;
+        align-items: center;
+}
+
+
+/* mobile nav button */
+.toggle-button {
+        width: 3rem;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        padding-top: 0;
+        padding-bottom: 0;
+
+}
+
+@media (min-width:40rem) {
+        .toggle-button {
+                display: none;
+        }
+}
+
+
+.toggle-button:focus {
+        outline: none;
+}
+
+.toggle-button__bar {
+        width: 100%;
+        height: 0.2rem;
+        background: black;
+        display: block;
+        margin: 0.6rem 0;
+}
+
+
+.main-header__brand {
+        text-decoration: none;
+        color: #0e4f1f;
+        font-weight: bold;
+        font-size: 22px;
+}
+
+.main-header__brand img {
+        height: 50px;
+}
+
+
+.main-nav {
+        display: none;
+}
+
+@media (min-width:40rem) {
+        .main-nav {
+                display: flex;
+        }
+}
+
+.main-nav__items {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        display: flex;
+}
+
+.main-nav__item {
+        margin-left: 20px;
+}
+
+.main-nav__item a,
+.mobile-nav__item a {
+        text-decoration: none;
+        color: #0e4f1f;
+        font-weight: bold;
+}
+
+.main-nav__item a:hover,
+.main-nav__item a:active {
+        color: white;
+}
+
+.main-nav__item--cta a,
+.mobile-nav__item--cta a {
+        color: white;
+        background: linear-gradient(to right, #c31432, #240b36);
+        border-radius: 8px;
+        padding: 8px 16px;
+}
+
+.main-nav__item--cta a:hover,
+.main-nav__item--cta a:active,
+.mobile-nav__item--cta a:hover,
+.mobile-nav__item--cta a:active {
+        color: #ff1b68;
+        background: white;
+
+}
+
+
+/* Footer */
+.main-footer {
+        background: black;
+        padding: 16px;
+        margin-top: 48px;
+        /* position: relative;
+        width: 100%;
+        bottom: 0;
+        left: 0; */
+
+}
+
+.main-footer__links {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+}
+
+.main-footer__link {
+        margin-top: 16px;
+}
+
+@media (min-width:40rem) {
+        .main-footer__links {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+        }
+
+        .main-footer__link {
+                margin-left: 16px;
+        }
+
+}
+
+.main-footer__link a {
+        text-decoration: none;
+        color: white;
+}
+
+.main-footer__link a:hover,
+.main-footer__link a:active {
+        color: #ccc
+}
+
+/* mobile nav */
+.mobile-nav {
+        display: none;
+        position: fixed;
+        z-index: 101;
+        top: 0;
+        left: 0;
+        background: white;
+        width: 80%;
+        height: 100vh;
+}
+
+.mobile-nav__items {
+        width: 90%;
+        height: 100%;
+        list-style: none;
+        margin: 0% auto;
+        padding: 0;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+}
+
+.mobile-nav__item {
+        margin: 1rem 0;
+}
+
+.mobile-nav__item a {
+        font-size: 1.5rem;
+}
+
+/* Button */
+.button {
+        background: #0e4f1f;
+        color: white;
+        padding: 8px;
+        border: 1.5px solid #0e4f1f;
+        border-radius: 8px;
+        font: inherit;
+        font-weight: bold;
+}
+
+.button:hover,
+.button:active {
+        cursor: pointer;
+        background: white;
+        color: #0e4f1f;
+}

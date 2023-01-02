@@ -1,0 +1,217 @@
+#product-overview {
+        width: 100vw;
+        height: 33vh;
+        padding: 10px;
+        background-image: url("https://images.unsplash.com/photo-1534385675048-b283e5848418?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1056&q=80");
+        background-size: cover;
+        background-repeat: no-repeat;
+        position: relative;
+        background-position: 10% 30%;
+
+}
+
+#product-overview h1 {
+        color: white;
+        font-family: 'Anton', sans-serif;
+        position: absolute;
+        left: 8px;
+        bottom: 0;
+        font-size: 1.6rem;
+}
+
+.section-title {
+        color: green;
+        text-align: center;
+}
+
+
+/* plans section */
+.plan {
+        background: #d5ffdc;
+        text-align: center;
+        padding: 16px;
+        margin: 0.5rem 0rem;
+        width: 100%;
+
+}
+
+
+
+.plan__title {
+        color: #0e4f1f;
+}
+
+.plan__price {
+        color: #858585;
+}
+
+.plan--highlighted .plan__title {
+        color: white
+}
+
+.plan--highlighted .plan__price {
+        color: #0e4f1f;
+}
+
+.plan__features {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+}
+
+.plan__features li {
+        margin: 8px 0;
+}
+
+.plan--highlighted {
+        /* background: #19b84c; */
+        background-image: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12);
+        color: white;
+}
+
+.plan__annotation {
+        background: white;
+        color: #0e4f1f;
+        box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
+        padding: 8px;
+        border-radius: 8px;
+}
+
+
+/* key-features section */
+#key-features {
+
+        /* background: #ff1b68;*/
+        background: linear-gradient(to right, #c31432, #240b36);
+
+        margin-top: 80px;
+        padding: 16px;
+}
+
+#key-features .section-title {
+        color: white;
+        margin: 32px;
+}
+
+.key-features__list {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+}
+
+.key-feature {
+        display: block;
+
+}
+
+
+.key-feature__image {
+        background-color: #ffcede;
+        width: 128px;
+        height: 128px;
+        border: 2px solid #424242;
+        border-radius: 50%;
+        margin: auto;
+        padding: 20px;
+}
+
+.key-feature__description {
+        text-align: center;
+        font-weight: bold;
+        color: white;
+        font-size: 20px;
+}
+
+
+
+
+/* modal */
+.modal {
+        position: fixed;
+        opacity: 0;
+        transform: translateY(-3rem);
+        transition: transform 500ms ease-out;
+        z-index: 200;
+        top: 20%;
+        left: 30%;
+        width: 40%;
+        background: white;
+        padding: 1rem;
+        border: 1px solid #ccc;
+        box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+}
+
+.modal__title {
+        text-align: center;
+        margin: 0 0 1rem 0;
+}
+
+.modal__actions {
+        text-align: center;
+}
+
+.modal__action {
+        border: 1px solid #0e4f1f;
+        background: #0e4f1f;
+        text-decoration: none;
+        color: white;
+        font: inherit;
+        padding: 0.5rem 1rem;
+        cursor: pointer;
+}
+
+.modal__action:hover,
+.modal__action:active {
+        background: #2ddf5c;
+        border-color: #2ddf5c;
+}
+
+.modal__action--negative {
+        background: red;
+        border-color: red;
+}
+
+.modal__action--negative:hover,
+.modal__action--negative:active {
+        background: #ff5454;
+        border-color: #ff5454;
+}
+
+/* media queries (for desktop version) */
+
+@media (min-width:40rem) {
+
+        #product-overview {
+                height: 50vh;
+        }
+
+        #product-overview h1 {
+                font-size: 3rem;
+        }
+
+        .key-feature {
+                display: inline-block;
+                vertical-align: top;
+                width: 30%;
+                max-width: 25rem;
+        }
+
+        .plan-list {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+        }
+
+        .plan {
+
+                width: 30%;
+                min-width: 13rem;
+                max-width: 25rem;
+                margin-left: 8px;
+        }
+
+        .plan--highlighted {
+                box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
+        }
+}
